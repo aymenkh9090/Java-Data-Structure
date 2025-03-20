@@ -6,6 +6,8 @@ public interface CarManagement <T>{
     void removeCar(T t);
     void removeById(int id);
     void display();
+    boolean searchCarByName(String name);
+    boolean searchCar(T t);
 
 
 

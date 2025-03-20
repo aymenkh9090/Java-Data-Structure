@@ -29,6 +29,19 @@ public class CarArrayList implements CarManagement<Car>{
         carList.forEach(System.out::println);
     }
 
+    @Override
+    public boolean searchCarByName(String name) {
+        for(Car car:carList){
+            return car.getName() ==name;
+        }
+       return false;
+    }
+
+    @Override
+    public boolean searchCar(Car car) {
+        return carList.contains(car);
+    }
+
 
     public static void main(String[] args) {
 
@@ -42,6 +55,8 @@ public class CarArrayList implements CarManagement<Car>{
         System.out.println("*****After Removing*****");
         carList.removeById(3);
         carList.display();
+        System.out.println(carList.searchCarByName("citroen"));
+        System.out.println(carList.searchCarByName("bmw"));
 
 
 
