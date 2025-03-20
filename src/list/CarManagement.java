@@ -8,6 +8,8 @@ public interface CarManagement <T>{
     void display();
     boolean searchCarByName(String name);
     boolean searchCar(T t);
+    void sortById();
+    void sortByNameThenByReference();
 
 
 

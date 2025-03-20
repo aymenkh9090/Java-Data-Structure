@@ -1,6 +1,6 @@
 package list;
 
-public class Car {
+public class Car implements Comparable<Car>{
     private int id;
     private String name;
     private String reference;
@@ -58,5 +58,10 @@ public class Car {
                 ", name='" + name + '\'' +
                 ", reference='" + reference + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Car o) {
+        return this.getId() - o.getId();
     }
 }
